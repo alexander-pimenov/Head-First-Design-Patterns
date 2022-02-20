@@ -50,6 +50,8 @@ import java.util.List;
  */
 public class WeatherData implements Subject {
     //Добавление новых типов наблюдателей не требует модификации субъекта.
+    //Добавляем контейнер ArrayList для хранения наблюдателей
+    //и создаем его в конструкторе.
     private List<Observer> observers;
 
     //Класс WeatherData обладает состоянием: температура, влажность, давление
@@ -58,20 +60,39 @@ public class WeatherData implements Subject {
     private float pressure;
 
     public WeatherData() {
-        //при создании Субъекта нуен только контейнер для хранения ссылок на Наблюдателей
+        //при создании Субъекта нужен только контейнер для хранения ссылок на Наблюдателей
         observers = new ArrayList<Observer>();
     }
 
+    /**
+     * Новые наблюдатели просто
+     * добавляются в конец списка.
+     *
+     * @param o наблюдатель
+     */
     @Override
     public void registerObserver(Observer o) {
         observers.add(o);
     }
 
+    /**
+     * Если наблюдатель хочет отменить
+     * регистрацию, мы просто удаляем
+     * его из списка.
+     *
+     * @param o наблюдатель
+     */
     @Override
     public void removeObserver(Observer o) {
         observers.remove(o);
     }
 
+    /**
+     * Самое интересное: оповещение на-
+     * блюдателей об изменении состо-
+     * яния через метод update(), реали-
+     * зуемый всеми наблюдателями.
+     */
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
@@ -82,6 +103,8 @@ public class WeatherData implements Subject {
     /**
      * Метод, вызываемый при изменениях состояния Субъекта,
      * чтобы вызвать метод оповещения Наблюдателей.
+     * Т.е. это оповещение наблюдателей
+     * о появлении новых данных.
      */
     public void measurementsChanged() {
         notifyObservers();
@@ -89,6 +112,12 @@ public class WeatherData implements Subject {
 
     /**
      * Сеттер для изменения состояния Субъекта.
+     * Приложить метеостанцию к каждому эк-
+     * земпляру книги нам не разрешили, поэтому
+     * вместо чтения данных с устройства мы
+     * воспользуемся тестовым методом. При
+     * желании вы можете написать код для
+     * загрузки погодных данных из Интернета.
      *
      * @param temperature входящее значение температуры
      * @param humidity    входящее значение влажности
