@@ -42,9 +42,8 @@ package headfirst.designpatterns.strategy;
  */
 public abstract class Duck {
     //Каждый объект Duck содержит ссылку на реализацию интерфейса QuackBehavior и FlyBehavior.
-    /*Объявляем две ссылочные переменные с типами
-    интерфейсов поведения. Переменные наследуются всеми
-    субклассами Duck (в том же пакете).*/
+    /*Объявляем две ссылочные переменные с типами интерфейсов поведения.
+    Переменные наследуются всеми субклассами Duck (в том же пакете).*/
     FlyBehavior flyBehavior;
     QuackBehavior quackBehavior;
 

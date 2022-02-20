@@ -57,5 +57,14 @@ public class MiniDuckSimulator {
         //И не надо писать дополнительный класс!
         model.setFlyBehavior(() -> System.out.println("Лечу на супер ракетной тяге!!!")); //установил с помощью лямбды новое поведение
         model.performFly();
+
+        /*Или еще раз для запоминания: создаем MallardDuck с новыми не стандартными поведениями
+        * Лямбда помогла, не пришлось создавать доп классы.*/
+        FlyBehavior flyByOneWing = ()-> System.out.println("Лечу на одном крыле !!! Второе затято телефоном !!!");
+        QuackBehavior quackAnother = ()-> System.out.println("Да, сегодня я не крякаю, а говорю человеческим языком !!!");
+        Duck mallardDuck = new MallardDuck(flyByOneWing, quackAnother);
+        mallardDuck.display();
+        mallardDuck.performFly();
+        mallardDuck.performQuack();
     }
 }
