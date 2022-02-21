@@ -49,6 +49,8 @@ public class Soy extends CondimentDecorator {
      * @return составная стоимость
      */
     public double cost() {
-        return .15 + beverage.cost();
+        //для округления до 2-х знаков после запятой используются некоторые присидания
+        double scale = Math.pow(10, 2);
+        return .15 + Math.ceil(beverage.cost() * scale) / scale;
     }
 }

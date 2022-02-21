@@ -49,6 +49,8 @@ public class Whip extends CondimentDecorator {
      * @return составная стоимость
      */
     public double cost() {
-        return .10 + beverage.cost();
+        //для округления до 2-х знаков после запятой используются некоторые присидания
+        double scale = Math.pow(10, 2);
+        return .10 + Math.ceil(beverage.cost() * scale) / scale;
     }
 }

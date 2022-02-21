@@ -3,6 +3,7 @@ package headfirst.designpatterns.decorator.starbuzz;
 public class StarbuzzCoffee {
 
     public static void main(String args[]) {
+
         //Заказываем эспрессо без дополнений, выводим описание и
         // стоимость.
         Beverage beverage = new Espresso();
@@ -31,6 +32,7 @@ public class StarbuzzCoffee {
         //Еще раз заказа как сам хотел
         Beverage beverage4 = new DarkRoast();
         beverage4 = new Mocha(beverage4);
+        beverage4 = new Milk(beverage4);
         beverage4 = new Whip(beverage4);
         beverage4 = new Whip(beverage4);
         System.out.println(beverage4.getDescription()
