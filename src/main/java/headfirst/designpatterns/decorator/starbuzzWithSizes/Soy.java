@@ -1,6 +1,10 @@
 package headfirst.designpatterns.decorator.starbuzzWithSizes;
 
+import lombok.Builder;
+
 public class Soy extends CondimentDecorator {
+
+	@Builder
 	public Soy(Beverage beverage) {
 		this.beverage = beverage;
 	}

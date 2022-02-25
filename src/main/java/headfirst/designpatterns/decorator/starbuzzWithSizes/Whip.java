@@ -1,6 +1,10 @@
 package headfirst.designpatterns.decorator.starbuzzWithSizes;
- 
+
+import lombok.Builder;
+
 public class Whip extends CondimentDecorator {
+
+	@Builder
 	public Whip(Beverage beverage) {
 		this.beverage = beverage;
 	}
