@@ -4,7 +4,7 @@ import java.util.*;
 
 abstract public class Pizza {
 	String name;
-	String dough;
+	String dough; //тесто
 	String sauce;
 	List<String> toppings = new ArrayList<String>();
 

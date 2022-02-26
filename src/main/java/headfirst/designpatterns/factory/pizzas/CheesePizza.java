@@ -1,5 +1,10 @@
 package headfirst.designpatterns.factory.pizzas;
 
+/**
+ * Конкретные продукты. Каждый продукт должен реализовать интерфейс
+ * Pizza и быть конкретным. Если эти условия выполняются, фабрика создает
+ * экземпляр и возвращает его клиенту.
+ */
 public class CheesePizza extends Pizza {
 	public CheesePizza() {
 		name = "Cheese Pizza";
