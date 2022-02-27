@@ -1,5 +1,8 @@
-package headfirst.designpatterns.factory.pizzafm;
-
+package headfirst.designpatterns.factory.pizzafabricmethod;
+/**
+ * Конкретный продукт — разные виды пиццы, производимые
+ * в наших пиццериях.
+ */
 public class NYStyleCheesePizza extends Pizza {
 
 	public NYStyleCheesePizza() { 

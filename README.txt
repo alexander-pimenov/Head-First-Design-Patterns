@@ -37,10 +37,10 @@ java -cp ./classes headfirst.headfirst.designpatterns.decorator.io.InputTest
 Chapter 4 - Factory Patterns
 --------------------------------------------------------
 Simple Factory
-java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzas.PizzaTestDrive
+java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzasimplefactory.PizzaTestDrive
 
 Factory Method
-java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzafm.PizzaTestDrive
+java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzafabricmethod.PizzaTestDrive
 
 Abstract Factory
 java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzaaf.PizzaTestDrive

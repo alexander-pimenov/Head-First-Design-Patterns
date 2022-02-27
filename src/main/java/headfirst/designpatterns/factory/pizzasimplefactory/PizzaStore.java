@@ -1,13 +1,15 @@
-package headfirst.designpatterns.factory.pizzas;
+package headfirst.designpatterns.factory.pizzasimplefactory;
 
 /**
  * Клиент фабрики.
  * PizzaStore обращается к SimplePizzaFactory для
  * получения экземпляров пиццы.
+ * Все пиццерии вашей сети должны использовать код PizzaStore,
+ * чтобы все пиццы готовились по единым правилам.
  */
 public class PizzaStore {
     //Классу PizzaStore передается ссылка
-    //на SimplePizzaFactory.
+    //на SimplePizzaFactory (посредством композиции).
     SimplePizzaFactory factory;
 
     /**

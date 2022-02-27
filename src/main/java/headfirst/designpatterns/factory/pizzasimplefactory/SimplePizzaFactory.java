@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzas;
+package headfirst.designpatterns.factory.pizzasimplefactory;
 
 /**
  * Единственная задача SimplePizzaFactory - создание объектов пиццы.

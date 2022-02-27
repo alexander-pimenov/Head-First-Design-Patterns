@@ -1,13 +1,25 @@
-package headfirst.designpatterns.factory.pizzafm;
+package headfirst.designpatterns.factory.pizzafabricmethod;
 
 import java.util.ArrayList;
 
+/**
+ * АбстрактнЫЙ класс Pizza, который станет суперклассом для конкретных (продуктов)
+ * классов пиццы.
+ * Фабрики производят продукты;
+ * у класса PizzaStore продуктом является Pizza.
+ */
 public abstract class Pizza {
+	//Каждый объект Pizza содержит название name,
+	//тип основы dough, тип соуса sauce и набор добавок toppings.
 	String name;
 	String dough;
 	String sauce;
 	ArrayList<String> toppings = new ArrayList<String>();
- 
+
+	/**
+	 * Приготовление пиццы (метод prepare) состоит из нескольких шагов,
+	 * выполняемых в определенной последовательности.
+	 */
 	void prepare() {
 		System.out.println("Prepare " + name);
 		System.out.println("Tossing dough...");
