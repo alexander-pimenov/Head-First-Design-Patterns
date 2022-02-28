@@ -43,7 +43,7 @@ Factory Method
 java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzafabricmethod.PizzaTestDrive
 
 Abstract Factory
-java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzaaf.PizzaTestDrive
+java -cp ./classes headfirst.headfirst.designpatterns.factory.pizzaabstractfactory.PizzaTestDrive
 
 Chapter 5 - Singleton Pattern
 ----------------------------------------------------------
