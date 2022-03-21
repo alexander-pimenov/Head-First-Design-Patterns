@@ -6,5 +6,8 @@ public class SingletonTestDrive {
 		Singleton bar = HotterSingleton.getInstance();
 		System.out.println(foo);
 		System.out.println(bar);
- 	}
+
+		Singleton singleton = new Singleton();
+		System.out.println(singleton);
+	}
 }
