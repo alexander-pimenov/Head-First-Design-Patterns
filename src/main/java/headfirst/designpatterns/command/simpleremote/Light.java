@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.simpleremote;
 
+/**
+ * Получатель. Получатель запроса.
+ */
 public class Light {
 
 	public Light() {

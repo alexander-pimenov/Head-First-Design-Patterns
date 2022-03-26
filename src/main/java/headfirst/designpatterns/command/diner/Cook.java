@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.diner;
 
+/**
+ * Это ПОЛУЧАТЕЛЬ
+ */
 public class Cook {
 
 	public Cook() {}

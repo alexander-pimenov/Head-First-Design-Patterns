@@ -1,6 +1,19 @@
 package headfirst.designpatterns.command.diner;
 
+/**
+ * Это КОМАНДА
+ * Все объекты команд реализуют единый интерфейс,
+ * который состоит всего из одного метода.
+ * В примере с кафе мы назвали этот метод orderUp(),
+ * но чаще встречается стандартное имя execute().
+ */
 @FunctionalInterface
 public interface Order {
-	public void orderUp();
+    /**
+     * Аналог команды execute() в паттерне Команда
+     * Объект команды содержит единственный метод
+     * execute(), здесь это метод orderUp(), в
+     * котором инкапсулируются операции с Получателем.
+     */
+    public void orderUp();
 }
