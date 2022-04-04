@@ -1,9 +1,9 @@
 package headfirst.designpatterns.command.simpleremote;
 
-public class GarageLightOff implements Command{
+public class GarageLightOffCommand implements Command{
     GarageDoor garageDoor;
 
-    public GarageLightOff(GarageDoor garageDoor) {
+    public GarageLightOffCommand(GarageDoor garageDoor) {
         this.garageDoor = garageDoor;
     }
 

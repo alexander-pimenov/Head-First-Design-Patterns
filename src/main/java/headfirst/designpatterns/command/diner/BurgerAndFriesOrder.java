@@ -3,8 +3,12 @@ package headfirst.designpatterns.command.diner;
 /**
  * Класс команды должен реализовать интерфейс {@link Order}
  * (обычно дают название интерфейсу - Command).
+ * Объект заказа инкапсулирует запрос на приготовление блюд
+ * в методе orderUp().
  */
 public class BurgerAndFriesOrder implements Order {
+    //Объект Заказа содержит ссылку на объект, который
+    //должен готовить блюда, на Повара
     Cook cook;
 
     public BurgerAndFriesOrder(Cook cook) {

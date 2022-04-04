@@ -1,5 +1,12 @@
 package headfirst.designpatterns.command.remote;
 
+/**
+ * Классы устройств выполняют
+ * непосредственную работу по
+ * управлению домашней электроникой.
+ * В данном примере используется класс
+ * Light.
+ */
 public class Light {
 	String location = "";
 

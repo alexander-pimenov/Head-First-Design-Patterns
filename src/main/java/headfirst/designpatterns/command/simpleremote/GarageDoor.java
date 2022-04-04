@@ -1,7 +1,9 @@
 package headfirst.designpatterns.command.simpleremote;
 
 /**
- * Получатель. Получатель запроса.
+ * Получатель. Получатель запроса. К нему приходят
+ * запросы от Команды.
+ * Класс управляющий устройством.
  */
 public class GarageDoor {
 
