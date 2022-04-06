@@ -6,6 +6,7 @@ package headfirst.designpatterns.command.remote;
  * управлению домашней электроникой.
  * В данном примере используется класс
  * Light.
+ * Это один из ПОЛУЧАТЕЛЕЙ
  */
 public class Light {
 	String location = "";
