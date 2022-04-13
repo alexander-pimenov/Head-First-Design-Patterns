@@ -17,7 +17,8 @@ import java.util.*;
  * Адаптируемый класс реализует интерфейс Enumeration.
  */
 public class EnumerationIterator implements Iterator<Object> {
-    //Адаптиру емый объект Enumeration сохраняется в переменной (композиция).
+    //Адаптируемый объект Enumeration сохраняется в переменной (композиция).
+    /*тип сделан обобщенным параметром - <?>, чтобы решение работало для объектов любого типа.*/
     Enumeration<?> enumeration;
 
     public EnumerationIterator(Enumeration<?> enumeration) {

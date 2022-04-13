@@ -17,6 +17,8 @@ import java.util.Random;
  * <p>
  * Использование композиции дает мне немалые преимущества.
  * Можно адаптировать не только отдельный класс, но и все его субклассы.
+ * <p>
+ * Теперь Duck адаптируется в Turkey, поэтому реализуем интерфейс Turkey.
  */
 public class DuckAdapter implements Turkey {
     //Адаптируемый объект (композиция)
@@ -24,14 +26,23 @@ public class DuckAdapter implements Turkey {
     Random rand;
 
     public DuckAdapter(Duck duck) {
+        //Сохраняем ссылку на адаптируемый объект Duck
         this.duck = duck;
+        //Случайный объект используется в методе fly()
         rand = new Random();
     }
 
+    /**
+     * Вызов gobble() превращается в quack().
+     */
     public void gobble() {
         duck.quack();
     }
 
+    /**
+     * Так как утки летают намного дальше индюшек, мы решили, что
+     * утка будет летать в среднем один раз из пяти.
+     */
     public void fly() {
         if (rand.nextInt(5) == 0) {
             duck.fly();
