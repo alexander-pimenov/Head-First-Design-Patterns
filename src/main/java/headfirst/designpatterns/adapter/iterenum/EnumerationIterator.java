@@ -15,8 +15,10 @@ import java.util.*;
  * ми исключениями. Но если клиент будет достаточно осторожен, а адаптер — хоро-
  * шо документирован, такое решение вполне приемлемо.
  * Адаптируемый класс реализует интерфейс Enumeration.
+ * EnumerationIterator - это адаптер.
  */
 public class EnumerationIterator implements Iterator<Object> {
+    //Целевой интерфейс Iterator
     //Адаптируемый объект Enumeration сохраняется в переменной (композиция).
     /*тип сделан обобщенным параметром - <?>, чтобы решение работало для объектов любого типа.*/
     Enumeration<?> enumeration;
@@ -48,7 +50,8 @@ public class EnumerationIterator implements Iterator<Object> {
     /**
      * К сожалению, поддержать метод remove() интерфейса
      * Iterator не удастся, поэтому мы просто
-     * инициируем исключение.
+     * инициируем исключение от RuntimeException.
+     * Такое решение вполне приемлемо.
      */
     public void remove() {
         throw new UnsupportedOperationException();

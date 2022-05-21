@@ -1,5 +1,8 @@
 package headfirst.designpatterns.iterator.dinermerger;
 
+/**
+ * Спецификация официантки с поддержкой Java
+ */
 public class Waitress {
 	Menu pancakeHouseMenu;
 	Menu dinerMenu;

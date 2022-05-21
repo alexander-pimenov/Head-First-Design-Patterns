@@ -26,7 +26,7 @@ public class DuckTestDrive {
         //Создаем объект Turkey
         Turkey turkey = new WildTurkey();
 
-        //Затем Turkey упаковывается в TurkeyAdapter и начинает
+        // Затем Turkey упаковывается в TurkeyAdapter и начинает
         // выглядеть, как Duck.
         Duck turkeyAdapter = new TurkeyAdapter(turkey);
 

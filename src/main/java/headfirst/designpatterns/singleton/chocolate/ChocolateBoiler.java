@@ -17,7 +17,7 @@ package headfirst.designpatterns.singleton.chocolate;
 public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
-    private static ChocolateBoiler uniqueInstance;
+    private static volatile ChocolateBoiler uniqueInstance;
 
     /**
      * Код выполняется только при пустом нагревателе!
@@ -34,13 +34,22 @@ public class ChocolateBoiler {
      * ничуть не сложнее обращения к глобальной переменной,
      * но он обладает дополнительными преимуществами — такими,
      * как отложенная инициализация.
+     * Здесь делаем двухфазную проверку с блоком синхронизации
+     * для работы с многими потоками. Так же поле uniqueInstance
+     * имеет ключевое слово volatile:
+     * private static volatile ChocolateBoiler uniqueInstance;
+     * и это обеспечивает наличие одного объекта.
      *
      * @return объект класса ChocolateBoiler
      */
     public static ChocolateBoiler getInstance() {
         if (uniqueInstance == null) {
-            System.out.println("Creating unique instance of Chocolate Boiler");
-            uniqueInstance = new ChocolateBoiler();
+            synchronized (ChocolateBoiler.class) {
+                if (uniqueInstance == null) {
+                    System.out.println("Creating unique instance of Chocolate Boiler");
+                    uniqueInstance = new ChocolateBoiler();
+                }
+            }
         }
         System.out.println("Returning instance of Chocolate Boiler <" + uniqueInstance + ">");
         return uniqueInstance;
